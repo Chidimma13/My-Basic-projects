@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baking</title>
+
+    <style>
+      body {
+        background-color: rgb(249, 182, 133);
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .theme {
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        background-color: black;
+        border: 2px solid wheat;
+        color: wheat;
+        transition: 150ms ease-in-out;
+      }
+
+      .theme:hover {
+        background-color: bisque;
+        color: black;
+        cursor: pointer;
+        border: 2px solid black;
+      }
+
+      h1 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+      }
+
+      .gridImg {
+        transition: all 150ms ease-in-out;
+      }
+
+      .gridImg:hover {
+        transform: scale(1.5);
+      }
+
+      .container {
+        margin: 20px auto;
+
+        max-width: 600px;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: whitesmoke;
+      }
+
+      .pic1 {
+        transition: transform 0.3s ease-out;
+      }
+
+      .pic1:hover {
+        filter: contrast(90%);
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+
+      p {
+        font-size: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        text-align: justify;
+      }
+
+      .baking {
+        display: block;
+        border-radius: 10px;
+        padding: 8px 20px;
+        margin: 0 auto;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 18px;
+        border: 2px solid black;
+        transition: 150ms ease-in-out;
+      }
+
+      .baking:hover {
+        border: 2px solid black;
+        color: black;
+        background-color: bisque;
+        cursor: pointer;
+      }
+
+      .link {
+        text-decoration: none;
+      }
+
+      .link:hover {
+        color: brown;
+      }
+
+      footer {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: small;
+        text-align: center;
+      }
+
+      .dark {
+        background: rgb(39, 21, 1);
+      }
+
+      .dark .container {
+        background: rgb(77, 60, 48);
+        color: bisque;
+      }
+
+      .dark a {
+        color: bisque;
+      }
+
+      .dark footer {
+        color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme">Dark Theme</button>
+    <div class="container">
+      <h1>🥯 What is Baking?</h1>
+      <h2>Baking is my Favorite Hobby</h2>
+      <a href="https://www.britannica.com/topic/baking" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/883/original/pexels-klaus-nielsen-6287301.jpg?1730212797"
+          alt="baking"
+          class="pic1"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/882/original/pexels-pixabay-12190.jpg?1730212786"
+          alt="christmas cookies"
+          class="gridImg"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/885/original/pexels-kseniachernaya-3952077.jpg?1730212829"
+          alt="ingredients"
+          class="gridImg"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/884/original/pexels-jeshoots-230743.jpg?1730212817"
+          alt="cupcake"
+          class="gridImg"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/881/original/pexels-pixabay-162786.jpg?1730212767"
+          alt="biscuit"
+          class="gridImg"
+        />
+      </div>
+      <p>
+        Baking, process of cooking by dry heat, especially in some kind of oven.
+        It is probably the oldest cooking method. Bakery products, which include
+        bread, rolls, cookies, pies, pastries, and muffins, are usually prepared
+        from flour or meal derived from some form of grain. Bread, already a
+        common staple in prehistoric times, provides many nutrients in the human
+        diet.
+      </p>
+      <a
+        class="link"
+        href="https://www.britannica.com/topic/baking"
+        target="_blank"
+        >📖 <em>Read more</em>
+      </a>
+      <button class="baking">Baking</button>
+    </div>
+    <footer>Coded by AbatamnonuJesus Okoli with 💛</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>

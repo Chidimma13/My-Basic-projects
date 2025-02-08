@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .black {
+        background-color: black;
+      }
+      button {
+        background-color: brown;
+        color: antiquewhite;
+        font-weight: bolder;
+        padding: 20px;
+        border-radius: 3px;
+      }
+
+      .black button {
+        background-color: antiquewhite;
+        color: black;
+        font-weight: bolder;
+        padding: 20px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>Turn Black</button>
+
+    <script>
+      function makeItBlack() {
+        let body = document.querySelector("body");
+        body.classList.add("black");
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", makeItBlack);
+    </script>
+  </body>
+</html>
